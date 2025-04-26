@@ -25,12 +25,18 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+## LLM ダウンロード
+
+```bash
+huggingface-cli download mradermacher/Llama-3.1-Nemotron-8B-UltraLong-4M-Instruct-GGUF Llama-3.1-Nemotron-8B-UltraLong-4M-Instruct.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
+```
+
 ## 使用方法
 
 ### 基本的な使い方
 
 ```bash
-python -m notebook4m --model /path/to/your/model.gguf
+python -m notebook4m --model ./Llama-3.1-Nemotron-8B-UltraLong-4M-Instruct.Q4_K_M.gguf --max_tokens 4096 --repo-path /Volumes/KIOXIA_EXCERIA_PLUS_G3_2TB/sandboxes/gpt-repository-loader
 ```
 
 または、インストール後：
